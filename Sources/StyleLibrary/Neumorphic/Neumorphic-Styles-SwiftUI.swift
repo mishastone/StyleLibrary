@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 //MARK: Buttons
-struct LightNeumorphicStyle: ButtonStyle {
+public struct LightNeumorphicStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(30)
@@ -44,7 +44,7 @@ struct LightNeumorphicStyle: ButtonStyle {
     }
 }
 
-struct DarkNeumorphicStyle: ButtonStyle {
+public struct DarkNeumorphicStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(30)

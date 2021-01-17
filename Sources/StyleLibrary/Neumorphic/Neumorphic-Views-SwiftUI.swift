@@ -11,7 +11,7 @@ import SwiftUI
 
 //MARK: Backgrounds
 
-struct DarkBackgroundNeumorphic<S: Shape>: View {
+public struct DarkBackgroundNeumorphic<S: Shape>: View {
     var isHighlighted: Bool
     var shape: S
     
@@ -36,7 +36,7 @@ struct DarkBackgroundNeumorphic<S: Shape>: View {
 
 //MARK: Buttons
 
-struct IconNeumorphicButton: View {
+public struct IconNeumorphicButton: View {
     //Toggle between the color scheme of the device
     @Environment(\.colorScheme) var colorScheme
     var image: String
@@ -63,7 +63,7 @@ struct IconNeumorphicButton: View {
 }
 
 // Icon Button Dependencies
-struct LightIconButton: View {
+public struct LightIconButton: View {
     var image: String
     var foregroundColor: Color
     var action: (() -> Void)?
@@ -96,7 +96,7 @@ struct LightIconButton: View {
     }
 }
 
-struct DarkIconButton: View {
+public struct DarkIconButton: View {
     var image: String
     var foregroundColor: Color
     var action: (() -> Void)?
