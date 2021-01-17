@@ -12,10 +12,10 @@ import SwiftUI
 //MARK: Backgrounds
 
 public struct DarkBackgroundNeumorphic<S: Shape>: View {
-    var isHighlighted: Bool
-    var shape: S
+    public var isHighlighted: Bool
+    public var shape: S
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             if isHighlighted {
                 shape
@@ -39,9 +39,9 @@ public struct DarkBackgroundNeumorphic<S: Shape>: View {
 public struct IconNeumorphicButton: View {
     //Toggle between the color scheme of the device
     @Environment(\.colorScheme) var colorScheme
-    var image: String
-    var foregroundColor: Color?
-    var action: (() -> Void)?
+    public var image: String
+    public var foregroundColor: Color?
+    public var action: (() -> Void)?
     
     private var schemedButton: some View {
         if colorScheme == .light {
@@ -51,30 +51,30 @@ public struct IconNeumorphicButton: View {
         }
     }
     
-    init(_ image: String, foregroundColor: Color? = Color.gray, action: (() -> Void)? = nil) {
+    public init(_ image: String, foregroundColor: Color? = Color.gray, action: (() -> Void)? = nil) {
         self.image = image
         self.foregroundColor = foregroundColor ?? Color.gray
         self.action = action
     }
     
-    var body: some View {
+    public var body: some View {
         schemedButton
     }
 }
 
 // Icon Button Dependencies
 public struct LightIconButton: View {
-    var image: String
-    var foregroundColor: Color
-    var action: (() -> Void)?
+    public var image: String
+    public var foregroundColor: Color
+    public var action: (() -> Void)?
     
-    init(_ image: String, _ foregroundColor: Color? = nil, action: (() -> Void)? = nil) {
+    public init(_ image: String, _ foregroundColor: Color? = nil, action: (() -> Void)? = nil) {
         self.image = image
         self.foregroundColor = foregroundColor ?? Color.gray
         self.action = action
     }
     
-    var body: some View {
+    public var body: some View {
         Button (action: {
             guard let getAction = action else {
                 return
@@ -97,17 +97,17 @@ public struct LightIconButton: View {
 }
 
 public struct DarkIconButton: View {
-    var image: String
-    var foregroundColor: Color
-    var action: (() -> Void)?
+    public var image: String
+    public var foregroundColor: Color
+    public var action: (() -> Void)?
     
-    init(_ image: String, _ foregroundColor: Color? = nil, action: (() -> Void)? = nil) {
+    public init(_ image: String, _ foregroundColor: Color? = nil, action: (() -> Void)? = nil) {
         self.image = image
         self.foregroundColor = foregroundColor ?? Color.gray
         self.action = action
     }
     
-    var body: some View {
+    public var body: some View {
         Button(action: {
             guard let getAction = action else {
                 return
