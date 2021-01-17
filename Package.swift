@@ -24,11 +24,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "StyleLibrary",
-            dependencies: [],
-            resources: [
-                .copy("StyleLibrary/Neumorphic")
-            ]
-            ),
+            dependencies: []),
         .testTarget(
             name: "StyleLibraryTests",
             dependencies: ["StyleLibrary"]),
