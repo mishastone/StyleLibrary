@@ -26,7 +26,7 @@ let package = Package(
             name: "StyleLibrary",
             dependencies: [],
             resources: [
-                .copy("Neumorphic")
+                .copy("StyleLibrary/Neumorphic")
             ]
             ),
         .testTarget(
